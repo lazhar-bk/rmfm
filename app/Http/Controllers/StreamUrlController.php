@@ -13,7 +13,7 @@ class StreamUrlController extends Controller
      */
     public function index()
     {
-        return response()->json(['url'=>'www.google.fr'],200);
+        return response()->json(['url'=>'http://188.165.125.102:2003/stream'],200);
     }
 
     /**
