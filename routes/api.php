@@ -2,9 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StreamingUrlController;
-use App\Http\Controllers\StreamingScheduleController;
-use App\Http\Controllers\StreamingUpcomingController;
+use App\Http\Controllers\StreamUrlController;
+use App\Http\Controllers\StreamcheduleController;
+use App\Http\Controllers\StreamUpcomingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +21,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::prefix('/streaming')->group(function () {
-    Route::get('/url', [StreamingUrlController::class, 'index']);
-    Route::get('/schedule', [StreamingScheduleController::class, 'index']);
-    Route::get('/upcoming', [StreamingUpcomingController::class, 'index']);
+Route::prefix('/stream')->group(function () {
+    Route::get('/url', [StreamUrlController::class, 'index']);
+    Route::get('/schedule', [StreamScheduleController::class, 'index']);
+    Route::get('/upcoming', [StreamUpcomingController::class, 'index']);
 });

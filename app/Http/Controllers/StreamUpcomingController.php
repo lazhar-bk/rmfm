@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class StreamingScheduleController extends Controller
+class StreamUpcomingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class StreamingScheduleController extends Controller
      */
     public function index()
     {
-        $json=('[ { "day": "Sunday", "events": [ { "show_id": "00000", "show_time": "00:00", "show_time_end": "00:10", "show_title": "Program 1" }, { "show_id": "00030", "show_time": "00:30", "show_time_end": "00:40", "show_title": "Program 2" } ] }, { "day": "Monday", "events": [ { "show_id": "10000", "show_time": "00:00", "show_time_end": "00:10", "show_title": "Program 1" }, { "show_id": "10030", "show_time": "00:30", "show_time_end": "00:40", "show_title": "Program 2" } ] } ]');
+        $json=('[ { "show_id": "62300", "show_time": "23:00", "show_time_end": "23:30", "show_title": "Program 1" }, { "show_id": "62331", "show_time": "23:30", "show_time_end": "23:55", "show_title": "Program 2" } ]');
         return response()->json($json,200);
     }
 
